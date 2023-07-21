@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+:root{
+    --inputErrors:hsl(0, 100%, 66%);
+
+    --white: hsl(0, 0%, 100%);
+    --lightGrayishViolet: hsl(270, 3%, 87%);
+    --darkGrayishViolet: hsl(279, 6%, 55%);
+    --veryDarkViolet: hsl(278, 68%, 11%);
+}
+
+body{
+    font-family: 'Space Grotesk',sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution{
+    display: none;
+}
+
+.cards-section{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-image:url('/images/bg-main-mobile.png');
+    background-size: cover;
+}
+
+
+.card-back{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    width: 70%;
+    height: 180px;
+    background-image: url('/images/bg-card-back.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-front{
+    position: absolute;
+    bottom: -20%;
+    left: 5%;
+    width: 70%;
+    height: 180px;
+    background-image: url('/images/bg-card-front.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: var(--white);
+}
+
+.card-front img{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 30px;
+}
+
+.form-section{
+    margin-top: 5rem;
+    padding: 0 1rem;
+}
+
+.form__name,.form__number,.form__date,.form__btn{
+    margin-bottom: 1.2rem;
+}
+
+.form__name,.form__number,.form__btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__date{
+    display: flex;
+}
+
+.input-together{
+    display: flex;
+}
+
+.input-together input{
+    width: 80px;
+}
+
+label{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.input-date{
+    margin-top: 0.5rem;
+}
+
+input{
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--lightGrayishViolet);
+    outline: none;
+}
+
+input:focus{
+    border: 1px solid var(--veryDarkViolet);
+}
+
+.input-cvc input{
+    width: 150px;
+}
+
+input[type="submit"],button{
+    background-color: var(--veryDarkViolet);
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    height: 3rem;
+}
+
+
+/*DATE CARDS*/
+
+#cvc{
+    color: var(--white);
+    position: absolute;
+    top: 34%;
+    left: 75%;
+    font-size: .8rem;
+ 
+}
+
+#card-number{
+    position: absolute;
+    bottom: 40%;
+    left: 8%;
+    letter-spacing: 2px;   
+}
+
+#card-number p:nth-child(1){
+    color: red;
+}
+
+#name,#date{
+    font-size: .7rem;
+}
+
+#name{
+    position: absolute;
+    bottom: 27%;
+    left: 8%;
+    text-transform: uppercase;
+}
+
+
+#date{
+    position: absolute;
+    bottom: 27%;
+    right: 8%;
+}
+
+
+.msg-error{
+    opacity: 0;
+    color: var(--inputErrors);
+    font-size: .8rem;
+}
+
+
+#cvc-input.active-msg,#month-input.active-msg,#year-input.active-msg,#cnumber-input.active-msg,#name-input.active-msg{
+    border: 1px solid var(--inputErrors);
+}
+
+
+/*COMPLETE SECTION*/
+
+.complete{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.complete h1{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin: 1rem 0;
+}
+
+.complete p{
+    color: var(--darkGrayishViolet);
+}
+
+.complete button{
+    margin-top: 2rem;
+}
+
+
+@media screen and (min-width:720px){
+
+
+    #interactive{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .cards-section{
+        width: 35%;
+        height: 100%;
+        background-image: url('/images/bg-main-desktop.png');
+    }
+
+    .card-back{
+        top: 52%;
+        right:0;
+        left: 65%;
+        width: 70%;
+        height: 180px;
+    }
+    
+    .card-front{
+        top: 20%;
+        bottom:0;
+        left: 50%;
+        width: 70%;
+        height: 180px;
+       
+    }
+
+    .form-section{
+        width: 65%;
+        height: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .form-section form{
+        width: 50%;
+    }
+
+    .form__date{
+        justify-content: space-between;
+    }
+
+    .input-together input:first-child{
+        margin-right: 1rem;
+    }
+
+    .input-cvc{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-cvc input{
+        width: 100%;
+    }
+
+    .input-cvc label{
+        margin-bottom: 0;
+    }
+
+
+    #card-number{
+        font-size: 1.3rem;
+        bottom: 30%;
+        left: 5%;
+        letter-spacing: 3px;
+    }
+
+    #name{
+        left: 5%;
+    }
+
+    #name,#date{
+        bottom: 18%;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    #cvc{
+        top: 44%;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+
+    .complete{
+        width: 40%;
+    }
+    
+}
