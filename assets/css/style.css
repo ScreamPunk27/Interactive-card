@@ -28,7 +28,7 @@ body{
     position: relative;
     height: 250px;
     width: 100%;
-    background-image:url('/images/bg-main-mobile.png');
+    background-image:url('./images/bg-main-mobile.png');
     background-size: cover;
 }
 
