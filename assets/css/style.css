@@ -79,11 +79,15 @@ body{
 
 .form__date{
     display: flex;
+    justify-content: space-between;
+ 
 }
 
-.input-together{
+.input-cvc{
     display: flex;
+    flex-direction: column;
 }
+
 
 .input-together input{
     width: 80px;
@@ -99,6 +103,14 @@ label{
     margin-top: 0.5rem;
 }
 
+.input-cvc label{
+    margin-bottom: 0;
+}
+
+.input-cvc input{
+    width: 150px;
+}
+
 input{
     height: 2.5rem;
     padding-left: 1rem;
@@ -110,10 +122,6 @@ input{
 
 input:focus{
     border: 1px solid var(--veryDarkViolet);
-}
-
-.input-cvc input{
-    width: 150px;
 }
 
 input[type="submit"],button{
