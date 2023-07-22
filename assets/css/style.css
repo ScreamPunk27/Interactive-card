@@ -28,44 +28,75 @@ body{
     position: relative;
     height: 250px;
     width: 100%;
+    padding: 1rem;
     background-image:url('../images/bg-main-mobile.png');
     background-size: cover;
 }
 
 
 .card-back{
-    position: absolute;
-    top: 15%;
-    right: 5%;
-    width: 70%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
     height: 180px;
+    max-width: 380px;
     background-image: url('../images/bg-card-back.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 5px;
 }
 
 .card-front{
     position: absolute;
     bottom: -20%;
     left: 5%;
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 180px;
+    max-width: 380px;
     background-image: url('../images/bg-card-front.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    padding: 0 1rem;
     color: var(--white);
+    border-radius: 5px;
 }
 
+
 .card-front img{
-    position: absolute;
+    /**position: absolute;
     top: 10%;
     left: 5%;
+    height: 30px;**/
+}
+
+.card-front__logo{
     height: 30px;
+}
+
+.card-front__logo img{
+    height: 100%;
+}
+
+
+#info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dates{
+    display: flex;
 }
 
 .form-section{
     margin-top: 5rem;
     padding: 0 1rem;
+}
+
+.input-monthyear,.input-cvc{
+    width: 50%;
 }
 
 .form__name,.form__number,.form__date,.form__btn{
@@ -108,7 +139,7 @@ label{
 }
 
 .input-cvc input{
-    width: 150px;
+    width: 100%;
 }
 
 input{
@@ -139,17 +170,20 @@ input[type="submit"],button{
 
 #cvc{
     color: var(--white);
-    position: absolute;
+    /*position: absolute;
     top: 34%;
-    left: 75%;
+    left: 75%;*/
     font-size: .8rem;
+    margin-right: 4rem;
  
 }
 
 #card-number{
-    position: absolute;
+    /**position: absolute;
     bottom: 40%;
     left: 8%;
+    letter-spacing: 2px;**/
+    font-size: 1.3rem;
     letter-spacing: 2px;   
 }
 
@@ -157,23 +191,26 @@ input[type="submit"],button{
     color: red;
 }
 
-#name,#date{
+#name,#dates{
     font-size: .7rem;
 }
 
 #name{
-    position: absolute;
+    /**position: absolute;
     bottom: 27%;
     left: 8%;
+    text-transform: uppercase;**/
     text-transform: uppercase;
 }
 
 
 #date{
-    position: absolute;
+    /**position: absolute;
     bottom: 27%;
-    right: 8%;
+    right: 8%;**/
 }
+
+
 
 
 .msg-error{
@@ -282,10 +319,10 @@ input[type="submit"],button{
 
 
     #card-number{
-        font-size: 1.3rem;
+        /**font-size: 1.3rem;
         bottom: 30%;
         left: 5%;
-        letter-spacing: 3px;
+        letter-spacing: 2px;**/
     }
 
     #name{
