@@ -35,10 +35,13 @@ body{
 
 
 .card-back{
+    position: absolute;
+    right: 5%;
     display: flex;
     justify-content: right;
     align-items: center;
     height: 180px;
+    width: 85%;
     max-width: 380px;
     background-image: url('../images/bg-card-back.png');
     background-size: cover;
@@ -54,6 +57,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     height: 180px;
+    width: 85%;
     max-width: 380px;
     background-image: url('../images/bg-card-front.png');
     background-size: cover;
